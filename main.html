@@ -1,0 +1,25 @@
+<div class="container" ng-controller="MainCtrl as main">
+    <section class="container">
+       <div class="row">
+            <div class="col-xs-6 col-xs-offset-3">
+                <div class="input-group">
+                  <input type="text" ng-model="artist" name="artist" class="form-control" placeholder="Artist Name ..." required>
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">!</button>
+                  </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" ng-if="artists">
+        <div class="row">
+            <div class="col-xs-4 artist" ng-repeat="ar in artists">
+                <a ng-href="#/artist/{{ar.name}}">
+                    <img ng-src="{{ar.image[3]['#text']}}"/>
+                    <h3>{{ar.name}}</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>

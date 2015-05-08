@@ -1,0 +1,25 @@
+<div class="container">
+
+    <section class="container" ng-if="artist">
+        <div class="row">
+            <div class="col-xs-12 artist">
+               <h3>{{artist.name}}</h3>
+               <a ng-href="#/">
+                   <h3>Volver a Buscar</h3>
+                </a>
+                <img ng-src="{{artist.image[4]['#text']}}"/>
+            </div>
+        </div>
+        <div class="row">
+           <h3>Bio</h3>
+            <p>{{artist.bio.content}}</p>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 artist">
+                <a ng-href="#/artist/{{sim.name}}" ng-repeat="sim in simartist">
+                   <h3>{{sim.name}}</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
